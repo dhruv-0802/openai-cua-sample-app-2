@@ -27,7 +27,7 @@ Step 21: On the **Mixpanel** dashboard, identify the card or widget titled 'Tota
 Step 22: On the **Mixpanel** dashboard, identify the card or widget titled 'Which country are users visiting from?' (or similar). Specifically, locate the text indicating 'Session Start (Unique Users)' and its 'Overall' count on this card.
 Step 23: To find the 'Session Start Unique Users' count specifically for the USA, hover your mouse over the 'United States' bar (or similar representation) within the 'Which country are users visiting from?' card. A tooltip will appear, showing the 'Session Start (Unique Users)' count for the United States.
 Step 24: To find the 'Session Start Unique Users' count specifically for China, hover your mouse over the 'China' bar (or similar representation) within the 'Which country are users visiting from?' card. A tooltip will appear, showing the 'Session Start (Unique Users)' count for China.
-Remember these are just rough guidelines to assist you. These are not exact instructions, analyse the description of the task to see what's best but try to adhere to them as closely as possible. During any step if there is a captcha, you need to pause the task and ask the user for solving the captcha.
+
 
 Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
 

@@ -4,6 +4,7 @@ from playwright.sync_api import Browser, Page, Error as PlaywrightError
 from hyperbrowser import Hyperbrowser
 from hyperbrowser.models import CreateSessionParams, ScreenConfig
 from dotenv import load_dotenv
+import base64
 
 from ..shared.base_playwright import BasePlaywrightComputer
 
@@ -103,20 +104,9 @@ class HyperbrowserBrowser(BasePlaywrightComputer):
 
     def _handle_new_page(self, page: Page):
         """Handle the creation of a new page."""
-        print("New page created via event")
-        # Only handle the page if it's not already being handled by new_tab or new_tab_go_to
-        if self._page != page:
-            try:
-                if not page.is_closed():
-                    self._page = page
-                    self._page.set_viewport_size(
-                        {"width": self.dimensions[0], "height": self.dimensions[1]}
-                    )
-                    page.on("close", self._handle_page_close)
-            except Exception as e:
-                print(f"Warning: Could not set viewport size for new page: {e}")
-                self._page = page
-                page.on("close", self._handle_page_close)
+        print("New page created")
+        self._page = page
+        page.on("close", self._handle_page_close)
 
     def _handle_page_close(self, page: Page):
         """Handle the closure of a page."""
@@ -128,19 +118,19 @@ class HyperbrowserBrowser(BasePlaywrightComputer):
                 print("Warning: All pages have been closed.")
                 self._page = None
 
-    def new_tab(self):
-        """Create a new tab and switch to it."""
-        try:
-            print("Creating new tab directly")
-            new_page = self._page.context.new_page()
-            # Set viewport size before setting as current page
-            new_page.set_viewport_size({"width": self.dimensions[0], "height": self.dimensions[1]})
-            new_page.on("close", self._handle_page_close)
-            self._page = new_page
-            print(f"New tab created successfully, current URL: {self._page.url}")
-        except Exception as e:
-            print(f"Error creating new tab: {e}")
-            raise
+    # def new_tab(self):
+    #     """Create a new tab and switch to it."""
+    #     try:
+    #         print("Creating new tab directly")
+    #         new_page = self._page.context.new_page()
+    #         # Set viewport size before setting as current page
+    #         new_page.set_viewport_size({"width": self.dimensions[0], "height": self.dimensions[1]})
+    #         new_page.on("close", self._handle_page_close)
+    #         self._page = new_page
+    #         print(f"New tab created successfully, current URL: {self._page.url}")
+    #     except Exception as e:
+    #         print(f"Error creating new tab: {e}")
+    #         raise
 
     # def get_weather(self, location: str, unit: str) -> str:
     #     """
@@ -239,7 +229,7 @@ class HyperbrowserBrowser(BasePlaywrightComputer):
                 f"Session completed. View replay at https://app.hyperbrowser.ai/features/sessions/{self.session.id}"
             )
 
-    def screenshot(self) -> str:
+     def screenshot(self) -> str:
         """
         Capture a screenshot of the current viewport using CDP.
         Returns:
@@ -260,3 +250,35 @@ class HyperbrowserBrowser(BasePlaywrightComputer):
                 f"CDP screenshot failed, falling back to standard screenshot: {error}"
             )
             return super().screenshot()
+
+
+
+    # def screenshot(self) -> str:
+    #     """
+    #     Capture a screenshot of the current viewport.
+    #     Returns:
+    #         str: A base64 encoded string of the screenshot.
+    #     """
+    #     try:
+    #         # Try standard screenshot first with a shorter timeout
+    #         return self._page.screenshot(timeout=10000, type='png', encoding='base64')
+    #     except Exception as error:
+    #         print(f"Standard screenshot failed: {error}")
+    #         try:
+    #             # Fall back to CDP with a shorter timeout if standard fails
+    #             cdp_session = self._page.context.new_cdp_session(self._page)
+    #             result = cdp_session.send(
+    #                 "Page.captureScreenshot",
+    #                 {"format": "png", "fromSurface": True},
+    #                 timeout=10000
+    #             )
+    #             return result["data"]
+    #         except Exception as cdp_error:
+    #             print(f"CDP screenshot also failed: {cdp_error}")
+    #             # If both methods fail, return a placeholder or error indicator
+    #             return ""
+            
+    # def screenshot(self) -> str:
+    #     """Capture only the viewport (not full_page)."""
+    #     png_bytes = self._page.screenshot(full_page=False)
+    #     return base64.b64encode(png_bytes).decode("utf-8")

@@ -9,9 +9,8 @@ Step 3: In the same percentage cell, type the formula to calculate the percentag
 Step 4: Press the Enter key to apply the formula. The calculated numerical value will appear in the cell.
 Step 5: With the cell still selected, click the 'Format as percent' button in the **Google Sheets** toolbar. This button typically displays a '%' symbol and will convert the numerical result into a percentage format.
 Step 6: If an 'AUTO FILL' suggestion appears (often with a green checkmark icon) adjacent to the cell, click the checkmark to automatically apply the formula and formatting to the rest of the column for other student entries.
-Step 7: Switch back to your recording application tab (e.g., the **Worklify** application tab, which might be identified by a URL like 'localhost:5173/edit-task/118').
-Step 8: Click the 'Stop Recording' button within the **Worklify** interface. This button is typically labeled 'Stop Recording' and is used to finalize your task recording.
-Remember these are just rough guidelines to assist you. These are not exact instructions, analyse the description of the task to see what's best but try to adhere to them as closely as possible. During any step if there is a captcha, you need to pause the task and ask the user for solving the captcha.
+
+
 
 Here are the some additional details that you might require to complete the task. These will help you when you have to make a decision, or fill in some information. Plan with keeping these details in mind.
 Details:

@@ -97,7 +97,7 @@ def main():
                 "content": "Use the additional goto() to go to a specific url everytime you need to go to a new url or open a new tab or go to url in new tab,  dont use click and type for these actions",
             }
         ]
-        user_input = open("examples/user_input4.txt", "r").read()
+        user_input = open("examples/user_input7.txt", "r").read()
         
         items.append({"role": "user", "content": user_input})
         items.append({
