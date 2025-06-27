@@ -1,0 +1,36 @@
+user_input: You have to do a task: Calculate Percentages in Google Sheets.
+The description of the task: Calculate and format percentages for student marks in Google Sheets, then auto-fill for other entries.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
+ If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
+Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
+Steps:
+Step 1: Switch to the **Google Sheets** tab in your browser. This tab is typically labeled with 'Google Sheets' and the name of your spreadsheet.
+Step 2: Clear any existing content in the first cell where you intend to calculate the percentage. This cell is an editable field within the spreadsheet grid, located at the intersection of your designated 'Percentage' column and the first student's row. You can do this by selecting the cell and pressing the Delete or Backspace key.
+Step 3: In the same percentage cell, type the formula to calculate the percentage. This formula should start with an equals sign (=), followed by the cell reference containing the student's marks, then a division symbol (/), and finally the total possible marks. For example, if the student's marks are in cell C4 and the total possible marks are 50, you would type `=C4/50`.
+Step 4: Press the Enter key to apply the formula. The calculated numerical value will appear in the cell.
+Step 5: With the cell still selected, click the 'Format as percent' button in the **Google Sheets** toolbar. This button typically displays a '%' symbol and will convert the numerical result into a percentage format.
+Step 6: If an 'AUTO FILL' suggestion appears (often with a green checkmark icon) adjacent to the cell, click the checkmark to automatically apply the formula and formatting to the rest of the column for other student entries.
+Step 7: Switch back to your recording application tab (e.g., the **Worklify** application tab, which might be identified by a URL like 'localhost:5173/edit-task/118').
+Step 8: Click the 'Stop Recording' button within the **Worklify** interface. This button is typically labeled 'Stop Recording' and is used to finalize your task recording.
+Remember these are just rough guidelines to assist you. These are not exact instructions, analyse the description of the task to see what's best but try to adhere to them as closely as possible. During any step if there is a captcha, you need to pause the task and ask the user for solving the captcha.
+
+Here are the some additional details that you might require to complete the task. These will help you when you have to make a decision, or fill in some information. Plan with keeping these details in mind.
+Details:
+Detail Name: Starting Percentage Cell
+Detail Description: None
+Detail Value: 
+Detail Name: Student Marks Cell
+Detail Description: None
+Detail Value: 
+Detail Name: Total Possible Marks
+Detail Description: None
+Detail Value: 
+
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
+
+Special Instructions:
+https://docs.google.com/spreadsheets/d/1s5TWPsFVG-llyOc4JJQKcY51-hpWbDPWRwwXABA9O_k/edit?gid=0#gid=0
+
+do for all the entries
+use the formula =b2/50
+x

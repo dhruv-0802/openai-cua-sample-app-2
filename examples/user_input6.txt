@@ -1,0 +1,39 @@
+user_input: You have to do a task: Extract Web Analytics Metrics.
+The description of the task: The task is to extract specific web analytics metrics and their country-specific breakdowns from Mixpanel and record them into a Google Sheet.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
+ If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
+Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
+Steps:
+Step 1: Navigate to the **Mixpanel** dashboard tab in your browser. This tab is typically labeled 'Web Analytics Template - E-Com...' or similar, located at the top of the browser window.
+Step 2: In **Mixpanel**, filter the data to show 'Today's' metrics. Click the button labeled 'Today' in the date filter toolbar, positioned above the main dashboard charts, to ensure all displayed metrics reflect the current day's activity.
+Step 3: Switch to the **Google Sheet** tab. This tab is typically labeled 'Product list Feature Adoption M...' or similar, located at the top of the browser window, to review the list of metrics that need to be extracted from **Mixpanel**.
+Step 4: Review the **Google Sheet** to identify the specific web analytics metrics (e.g., DAU, New Users, Session Start Unique Users, Total Sessions) that need to be extracted, noting the columns for 'Total', 'USA Value', and 'China Value'.
+Step 5: Switch back to the **Mixpanel** dashboard tab (e.g., labeled 'mixpanel.com/project/...') to begin extracting the first metric, Daily Active Users (DAU).
+Step 6: Open the detailed report for Daily Active Users (DAU). Click on the dashboard card or widget titled 'How many active users did we have in the last week?' (or similar), typically located in the upper section of the dashboard, displaying the count of Active Users.
+Step 7: On the detailed DAU report page in **Mixpanel**, note the prominently displayed total number of 'Active Users' for the day.
+Step 8: Initiate adding a breakdown to the DAU metric. Click the plus icon button labeled or associated with 'Breakdown' in the right sidebar of the detailed DAU report view.
+Step 9: Switch to the **Google Sheet** tab (e.g., labeled 'Product list Feature Adoption M...') to record the obtained total DAU value.
+Step 10: In the **Google Sheet**, type the noted total DAU value into the cell corresponding to the 'DAU' row and 'Total' column.
+Step 11: Switch back to the **Mixpanel** tab, specifically the DAU report where the breakdown property selection is pending.
+Step 12: Select 'Country' as the breakdown property for DAU. From the 'Select Property' list or dropdown that appears after initiating the breakdown, click on the item labeled 'Country' (often with an 'Aa' prefix or icon) to segment the Daily Active Users data by country.
+Step 13: Observe the DAU report view, which now displays a list or chart with DAU counts per country. Identify and note the DAU values for 'United States' and 'China'.
+Step 14: Switch to the **Google Sheet** tab (e.g., labeled 'Product list Feature Adoption M...') to record the country-specific DAU values.
+Step 15: In the **Google Sheet**, type the noted USA DAU value into the cell corresponding to the 'DAU' row and 'USA Value' column.
+Step 16: In the **Google Sheet**, type the noted China DAU value into the cell corresponding to the 'DAU' row and 'China Value' column.
+Step 17: Switch back to the **Mixpanel** tab.
+Step 18: Navigate back to the main **Mixpanel** dashboard view. Click the breadcrumb link labeled 'Web Analytics Template' (or similar dashboard name) located at the top-left area of the **Mixpanel** page, part of the navigation path display.
+Step 19: On the **Mixpanel** dashboard, identify the card or widget titled 'How many new users did we gain in the last week?' (or similar), which displays the total 'New Users' count for the day.
+Step 20: Scroll down the main content area of the **Mixpanel** dashboard to locate other required metrics.
+Step 21: On the **Mixpanel** dashboard, identify the card or widget titled 'Total Sessions' (or similar), which displays the total count of events or sessions for the day.
+Step 22: On the **Mixpanel** dashboard, identify the card or widget titled 'Which country are users visiting from?' (or similar). Specifically, locate the text indicating 'Session Start (Unique Users)' and its 'Overall' count on this card.
+Step 23: To find the 'Session Start Unique Users' count specifically for the USA, hover your mouse over the 'United States' bar (or similar representation) within the 'Which country are users visiting from?' card. A tooltip will appear, showing the 'Session Start (Unique Users)' count for the United States.
+Step 24: To find the 'Session Start Unique Users' count specifically for China, hover your mouse over the 'China' bar (or similar representation) within the 'Which country are users visiting from?' card. A tooltip will appear, showing the 'Session Start (Unique Users)' count for China.
+Remember these are just rough guidelines to assist you. These are not exact instructions, analyse the description of the task to see what's best but try to adhere to them as closely as possible. During any step if there is a captcha, you need to pause the task and ask the user for solving the captcha.
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
+
+Special Instructions:
+Google sheets link: https://docs.google.com/spreadsheets/d/1t3DwfjtGUDD_jM9G4dAdZvCqGdisDtmX0Lel_I7L_14/edit?gid=0#gid=0
+
+dashboard link : https://mixpanel.com/project/3018488/view/3536632/app/boards#id=6020908
+
+scroll only by 100 Pixels at a time not more than that
