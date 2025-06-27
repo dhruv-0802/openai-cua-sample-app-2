@@ -1,8 +1,8 @@
 user_input: You have to do a task: Cheapest Flight Search.
 The description of the task: Search the cheapest flight between two cities on a particular date. Give details of top three cheapest flights.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
- If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
-Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
-Steps:
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
 Step 1: Open the browser and navigate to google.com.
 Step 2: Search for 'google flights' on Google. The search bar is located at the top-center of the screenshot.
 Step 3: Click on the google flights link from the search results.

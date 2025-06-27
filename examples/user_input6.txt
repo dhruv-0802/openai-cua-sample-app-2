@@ -1,8 +1,8 @@
 user_input: You have to do a task: Extract Web Analytics Metrics.
 The description of the task: The task is to extract specific web analytics metrics and their country-specific breakdowns from Mixpanel and record them into a Google Sheet.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
- If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
-Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
-Steps:
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
 Step 1: Navigate to the **Mixpanel** dashboard tab in your browser. This tab is typically labeled 'Web Analytics Template - E-Com...' or similar, located at the top of the browser window.
 Step 2: In **Mixpanel**, filter the data to show 'Today's' metrics. Click the button labeled 'Today' in the date filter toolbar, positioned above the main dashboard charts, to ensure all displayed metrics reflect the current day's activity.
 Step 3: Switch to the **Google Sheet** tab. This tab is typically labeled 'Product list Feature Adoption M...' or similar, located at the top of the browser window, to review the list of metrics that need to be extracted from **Mixpanel**.

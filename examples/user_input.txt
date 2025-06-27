@@ -1,8 +1,8 @@
 You have to do a task: LinkedIn to Apollo to Salesforce Contact Push.
 The description of the task: The task is to find a person on LinkedIn by company and educational institution, add them to a specified list in Apollo.io, and then push that contact to Salesforce.. 
- If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
-Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
-Steps:
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
 Step 1: Switch to the **LinkedIn** tab in your browser. This tab is typically labeled with 'Feed | LinkedIn' or similar and is located in the browser's tab bar.
 Step 2: Click on the search input field, located at the top-left of the **LinkedIn** page. This field typically displays a magnifying glass icon and placeholder text like 'Search'.
 Step 3: Type the desired company name into the search input field.

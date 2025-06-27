@@ -1,8 +1,8 @@
 user_input: You have to do a task: Calculate Percentages in Google Sheets.
 The description of the task: Calculate and format percentages for student marks in Google Sheets, then auto-fill for other entries.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
- If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
-Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
-Steps:
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
 Step 1: Switch to the **Google Sheets** tab in your browser. This tab is typically labeled with 'Google Sheets' and the name of your spreadsheet.
 Step 2: Clear any existing content in the first cell where you intend to calculate the percentage. This cell is an editable field within the spreadsheet grid, located at the intersection of your designated 'Percentage' column and the first student's row. You can do this by selecting the cell and pressing the Delete or Backspace key.
 Step 3: In the same percentage cell, type the formula to calculate the percentage. This formula should start with an equals sign (=), followed by the cell reference containing the student's marks, then a division symbol (/), and finally the total possible marks. For example, if the student's marks are in cell C4 and the total possible marks are 50, you would type `=C4/50`.

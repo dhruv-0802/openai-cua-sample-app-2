@@ -1,8 +1,8 @@
 user_input: You have to do a task: Process Expense Claims.
 The description of the task: Review and process pending expense claims by verifying receipts and checking policy compliance, then approving or rejecting them.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
- If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information.
-Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
-Steps:
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
 Step 1: Switch to the expense management application tab. This tab is typically labeled 'v0 App' or similar, positioned among other open tabs at the top of the browser window, to access the ExpenseManager application for processing expense approvals.
 Step 2: Identify a pending expense from the 'Expense Approval' table. Look for a row showing expense details (e.g., type, amount, date, employee) and a 'Pending' status. This is the expense claim that needs to be reviewed and processed.
 Step 3: Switch to the **Google Drive** tab containing receipts. This tab is typically labeled 'fake_receipts - Google Drive' or similar, to locate and verify the corresponding receipt for the identified expense.
