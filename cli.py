@@ -3,6 +3,7 @@ from agent.agent import Agent
 from computers.config import *
 from computers.default import *
 from computers import computers_config
+import json
 
 
 def acknowledge_safety_check_callback(message: str) -> bool:
@@ -58,8 +59,9 @@ def main():
             if not args.start_url.startswith("http"):
                 args.start_url = "https://" + args.start_url
             agent.computer.goto(args.start_url)
-
+            step_count = 0
         while True:
+            step_count += 1
             try:
                 user_input = args.input or input("> ")
                 if user_input == "exit":
@@ -74,6 +76,9 @@ def main():
                 show_images=args.show,
                 debug=args.debug,
             )
+            with open('output.txt', 'a') as f:
+                f.write(f"Step {step_count}:\n")
+                f.write(f"Output Items:\n{json.dumps(output_items, indent=4)}\n\n")
             items += output_items
             args.input = None
 

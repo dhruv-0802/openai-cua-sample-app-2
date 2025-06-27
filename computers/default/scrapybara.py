@@ -1,5 +1,7 @@
 import os
 import time
+import requests
+import json
 from dotenv import load_dotenv
 from scrapybara import Scrapybara
 from playwright.sync_api import sync_playwright, Browser, Page
@@ -129,6 +131,47 @@ class ScrapybaraBrowser:
             return
         path = [[point["x"], point["y"]] for point in path]
         self.instance.computer(action="drag_mouse", path=path)
+    
+    def get_weather(self, location: str, unit: str) -> str:
+        """
+        Call API to get weather
+        """
+        try:
+            # Using OpenWeatherMap API (free tier)
+            # You'll need to get a free API key from https://openweathermap.org/api
+            api_key = os.getenv("OPENWEATHER_API_KEY")
+            if not api_key:
+                return "Error: OPENWEATHER_API_KEY environment variable not set. Please get a free API key from https://openweathermap.org/api"
+            
+            # Convert unit to OpenWeatherMap format
+            units = "metric" if unit == "c" else "imperial"
+            
+            # Make API request
+            url = f"http://api.openweathermap.org/data/2.5/weather"
+            params = {
+                "q": location,
+                "appid": api_key,
+                "units": units
+            }
+            
+            response = requests.get(url, params=params, timeout=10)
+            response.raise_for_status()
+            
+            data = response.json()
+            
+            # Extract only temperature
+            temp = data["main"]["temp"]
+            temp_unit = "°C" if unit == "c" else "°F"
+            
+            return f"{temp}{temp_unit}"
+            
+        except requests.exceptions.RequestException as e:
+            return f"Error: {str(e)}"
+        except KeyError as e:
+            return f"Error: {str(e)}"
+        except Exception as e:
+            return f"Error: {str(e)}"
+
 
 
 class ScrapybaraUbuntu:

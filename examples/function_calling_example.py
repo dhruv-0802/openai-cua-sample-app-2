@@ -1,5 +1,11 @@
-from agent import Agent
-from computers import ScrapybaraBrowser
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from agent.agent import Agent
+from computers.contrib import HyperbrowserBrowser
+from google import genai
+
 
 tools = [
     {
@@ -23,7 +29,7 @@ tools = [
 
 
 def main():
-    with ScrapybaraBrowser() as computer:
+    with HyperbrowserBrowser() as computer:
         agent = Agent(tools=tools, computer=computer)
         items = []
         while True:

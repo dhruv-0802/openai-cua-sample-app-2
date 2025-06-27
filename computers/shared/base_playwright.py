@@ -119,12 +119,49 @@ class BasePlaywrightComputer:
     def move(self, x: int, y: int) -> None:
         self._page.mouse.move(x, y)
 
+    def is_page_ready_for_input(self) -> bool:
+        """Check if the page is ready for keyboard/mouse input."""
+        try:
+            # Check if page is still connected
+            _ = self._page.url
+            
+            # Check if page is not in a loading state
+            ready_state = self._page.evaluate("document.readyState")
+            
+            # Check if page has focus (optional)
+            has_focus = self._page.evaluate("document.hasFocus()")
+            
+            return ready_state == "complete" and has_focus
+        except Exception as e:
+            print(f"Page not ready for input: {e}")
+            return False
+
     def keypress(self, keys: List[str]) -> None:
-        mapped_keys = [CUA_KEY_TO_PLAYWRIGHT_KEY.get(key.lower(), key) for key in keys]
-        for key in mapped_keys:
-            self._page.keyboard.down(key)
-        for key in reversed(mapped_keys):
-            self._page.keyboard.up(key)
+        try:
+            # Ensure the page has focus before sending keyboard commands
+            self._page.bring_to_front()
+            
+            # Wait a moment for focus to be established
+            time.sleep(0.1)
+            
+            # Check if page is ready for input
+            if not self.is_page_ready_for_input():
+                print("Page not ready for input, waiting...")
+                self._page.wait_for_load_state("networkidle", timeout=5000)
+            
+            mapped_keys = [CUA_KEY_TO_PLAYWRIGHT_KEY.get(key.lower(), key) for key in keys]
+            print(f"Sending keys: {mapped_keys}")
+            
+            for key in mapped_keys:
+                self._page.keyboard.down(key)
+            for key in reversed(mapped_keys):
+                self._page.keyboard.up(key)
+                
+            print(f"Keypress {keys} completed successfully")
+        except Exception as e:
+            print(f"Error during keypress {keys}: {e}")
+            # Optionally re-raise if you want to stop execution
+            # raise
 
     def drag(self, path: List[Dict[str, int]]) -> None:
         if not path:
@@ -142,11 +179,25 @@ class BasePlaywrightComputer:
         except Exception as e:
             print(f"Error navigating to {url}: {e}")
 
+    def switch_tab(self, tab_index: int) -> None:
+        self._page.context.switch_to_page(self._page.context.pages[tab_index - 1])
+        print(f"Switched to tab {tab_index}")
+
     def back(self) -> None:
         return self._page.go_back()
 
     def forward(self) -> None:
         return self._page.go_forward()
+
+    def new_tab(self) -> None:
+        """Create a new tab and switch to it."""
+        try:
+            new_page = self._page.context.new_page()
+            self._page = new_page
+            print(f"New tab created, current URL: {self._page.url}")
+        except Exception as e:
+            print(f"Error creating new tab: {e}")
+            raise
 
     # --- Subclass hook ---
     def _get_browser_and_page(self) -> tuple[Browser, Page]:

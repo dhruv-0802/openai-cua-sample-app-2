@@ -1,0 +1,48 @@
+You have to do a task: LinkedIn to Apollo to Salesforce Contact Push.
+The description of the task: The task is to find a person on LinkedIn by company and educational institution, add them to a specified list in Apollo.io, and then push that contact to Salesforce.. 
+ If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are a rough guidelines to do the task. Remember these are just rough guidelines to act as a reference. These will give a broad overview of what to do. These may contain some dummy values for explanation purposes. You can ignore these dummy values.
+Steps:
+Step 1: Switch to the **LinkedIn** tab in your browser. This tab is typically labeled with 'Feed | LinkedIn' or similar and is located in the browser's tab bar.
+Step 2: Click on the search input field, located at the top-left of the **LinkedIn** page. This field typically displays a magnifying glass icon and placeholder text like 'Search'.
+Step 3: Type the desired company name into the search input field.
+Step 4: From the search suggestions that appear in the dropdown list, click on the item that represents the target company. This item typically displays the company name and 'Company' as a descriptor.
+Step 5: On the search results page, click on the company's name or logo. This is usually the most prominent entry for the company, and clicking it will navigate you to its official profile page on **LinkedIn**.
+Step 6: On the company's **LinkedIn** profile page, click on the 'People' tab. This tab is located in the navigation bar of the company page (e.g., among Home, About, Posts, Jobs, People, Insights).
+Step 7: On the 'People' tab, locate the 'Where they studied' filter section and click the associated plus icon or 'Add' button to add an educational institution filter.
+Step 8: In the text input field that appears for adding a school, labeled 'Add any school' or similar, type the name of the educational institution you are targeting.
+Step 9: From the suggested institution names in the dropdown list that matches your typed input, click on the relevant educational institution to apply the filter.
+Step 10: From the filtered list of people displayed, click on the first person's profile card or name link to view their **LinkedIn** profile.
+Step 11: Wait for the person's **LinkedIn** profile page to fully load. Review their details, such as name, current role, and education, to confirm it is the correct profile.
+Step 12: Switch to the **Apollo.io** browser tab. This tab is typically labeled 'Home - Apollo' or similar and is located in the browser's tab bar.
+Step 13: In **Apollo.io**, click on the 'Quick search' input field, which is typically located at the top-left of the **Apollo.io** interface.
+Step 14: Type the person's name and their current company into the 'Quick search' input field in **Apollo.io**.
+Step 15: From the search suggestion dropdown list, click on the matching person's profile, which displays their name and role/company, to open their profile page in **Apollo.io**.
+Step 16: On the person's **Apollo.io** profile page, click the 'Add to list' button, typically located at the top-right of the contact's profile page.
+Step 17: In the 'Add to lists' modal that appears, click into the input field labeled 'Enter or create lists...' to activate the dropdown for selecting an existing list or creating a new one.
+Step 18: From the dropdown menu of available lists, click on the name of the designated list to which you want to add the contact.
+Step 19: Click the 'Add to lists' button (often yellow) within the modal to confirm adding the contact to the selected list.
+Step 20: In **Apollo.io**, click on the 'Lists' link, located in the left-hand navigation panel, typically under the 'PROSPECT & ENRICH' section, to navigate to the 'My lists' section.
+Step 21: In the table of lists under 'My lists', click on the name of the designated list to open and view the contacts contained within it.
+Step 22: In the list view, select the checkbox located to the left of the person's name to select them for further actions, such as CRM integration.
+Step 23: Click on the **Salesforce** integration icon (often purple with a cloud design) or a dropdown menu related to CRM integrations, located in the action bar above the list of contacts.
+Step 24: From the dropdown menu that appears after clicking the **Salesforce** icon, click the option labeled 'Push to **Salesforce**'.
+Step 25: Wait for a notification message to appear on the screen (typically at the top-right), indicating 'Pushing to CRM', 'Contact Push in progress', or 'Success', to confirm the contact push to **Salesforce** has been successfully initiated or completed.
+Remember these are just rough guidelines to assist you. These are not exact instructions, analyse the description of the task to see what's best but try to adhere to them as closely as possible. During any step if there is a captcha, you need to pause the task and ask the user for solving the captcha.
+
+Here are the some additional details that you might require to complete the task. These will help you when you have to make a decision, or fill in some information. Plan with keeping these details in mind.
+Details:
+Detail Name: Desired Company Name - Blume Ventures
+Detail Description: None
+Detail Value: 
+Detail Name: Target Educational Institution Name - Birla institute of Science, Pilani
+Detail Description: None
+Detail Value: 
+Detail Name: Designated List Name - Bitsian VCs
+Detail Description: None
+Detail Value: 
+
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
+
+No speific special instructions

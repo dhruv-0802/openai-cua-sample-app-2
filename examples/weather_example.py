@@ -1,5 +1,9 @@
-from agent import Agent
-from computers import ScrapybaraBrowser
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from agent.agent import Agent
+from computers.default import ScrapybaraBrowser
 
 with ScrapybaraBrowser() as computer:
     agent = Agent(computer=computer)
