@@ -229,7 +229,7 @@ class HyperbrowserBrowser(BasePlaywrightComputer):
                 f"Session completed. View replay at https://app.hyperbrowser.ai/features/sessions/{self.session.id}"
             )
 
-     def screenshot(self) -> str:
+    def screenshot(self) -> str:
         """
         Capture a screenshot of the current viewport using CDP.
         Returns:

@@ -65,6 +65,7 @@ def validator_gemini(last_message, agent_message_list, screenshot, user_task):
     prompt = f"{system_prompt}\n\nUser Task: {user_task}\nLatest Agent Message: {last_message}\nAgent Message History: {str(agent_message_list)}"
     if screenshot:
         prompt += f"\nScreenshot Status: Screenshot available"
+        contents= [prompt,screenshot]
     else:
         prompt += f"\nScreenshot Status: No screenshot available"
 
@@ -72,7 +73,7 @@ def validator_gemini(last_message, agent_message_list, screenshot, user_task):
     try:
         response = client.models.generate_content(
             model=model_flash,
-            contents=prompt,
+            contents=contents,
             config={
                 'temperature': 0,
                 'response_mime_type': "application/json",
@@ -97,7 +98,7 @@ def main():
                 "content": "Use the additional goto() to go to a specific url everytime you need to go to a new url or open a new tab or go to url in new tab,  dont use click and type for these actions",
             }
         ]
-        user_input = open("examples/user_input7.txt", "r").read()
+        user_input = open("examples/user_input4.txt", "r").read()
         
         items.append({"role": "user", "content": user_input})
         items.append({
