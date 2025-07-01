@@ -1,0 +1,18 @@
+user_input: You have to do a task: Cheapest Flight Search.
+The description of the task: Search the cheapest flight between two cities on a particular date. Give details of top three cheapest flights.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Do not hallucinate, ask user for further information by sending an assistant message
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
+Step 1: Open the browser and navigate to google.com.
+Step 2: Search for 'google flights' on Google. The search bar is located at the top-center of the screenshot.
+Step 3: Click on the google flights link from the search results.
+Step 4: In the 'Where from' field, type the city you want to depart from. The 'Where from' field is located at the top-center of the form, labeled 'Country, city or airport'.
+Step 5: In the 'Where to' field, type the city you want to arrive at. The 'Where to' field is located near the top-center of the screenshot, next to the 'Where from' field, and is currently highlighted with a blue border.
+Step 6: Click on the departure date field and enter the desired departure date. The departure date field is located in the top-center section of the form, labeled 'Depart' with a date displayed.
+Step 7: Cancel the return flight option if not needed.
+Step 8: Click on the 'Search' button to find flights. The 'Search' button is located at the right side of the flight search form, marked with a blue background.
+Step 9: Click on the cheapest option from the search results. The 'Cheapest' option is located near the top-center of the search results, marked with a blue background
+Step 10: Review the top three cheapest flights, noting the start time, end time, and price.
+
+If you feel any 

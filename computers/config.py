@@ -7,4 +7,6 @@ computers_config = {
     "browserbase": BrowserbaseBrowser,
     "scrapybara-browser": ScrapybaraBrowser,
     "scrapybara-ubuntu": ScrapybaraUbuntu,
+    "hyperbrowser": HyperbrowserBrowser,
+
 }

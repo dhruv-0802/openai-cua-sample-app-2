@@ -49,10 +49,16 @@ def sanitize_message(msg: dict) -> dict:
 
 def create_response(**kwargs):
     url = "https://api.openai.com/v1/responses"
+
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+    if not openai_api_key:
+        raise ValueError("OPENAI_API_KEY is not set")
+
     headers = {
-        "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY')}",
+        "Authorization": f"Bearer {openai_api_key}",
         "Content-Type": "application/json"
     }
+   # print(os.getenv("OPENAI_API_KEY"))
 
     openai_org = os.getenv("OPENAI_ORG")
     if openai_org:

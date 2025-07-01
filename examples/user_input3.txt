@@ -1,0 +1,35 @@
+user_input: You have to do a task: Process Expense Claims.
+The description of the task: Review and process pending expense claims by verifying receipts and checking policy compliance, then approving or rejecting them.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
+Step 1: Switch to the expense management application tab. This tab is typically labeled 'v0 App' or similar, positioned among other open tabs at the top of the browser window, to access the ExpenseManager application for processing expense approvals.
+Step 2: Identify a pending expense from the 'Expense Approval' table. Look for a row showing expense details (e.g., type, amount, date, employee) and a 'Pending' status. This is the expense claim that needs to be reviewed and processed.
+Step 3: Switch to the **Google Drive** tab containing receipts. This tab is typically labeled 'fake_receipts - Google Drive' or similar, to locate and verify the corresponding receipt for the identified expense.
+Step 4: Open a potential receipt file (e.g., a PDF file) from the list of files within the 'fake_receipts' **Google Drive** folder by clicking on its name. This is done to check if this receipt matches the expense details.
+Step 5: If the opened receipt does not match the expense details, close the incorrect receipt preview (e.g., by clicking a back arrow icon at the top-left of the **Google Drive** PDF preview interface) and open the next potential receipt file by clicking its name in the file list.
+Step 6: Verify the details displayed on the opened PDF receipt (e.g., expense type, amount, date, employee) to confirm that they match the expense claim. This receipt must match the claim for further processing.
+Step 7: Switch to the **Policy** document tab. This tab is typically labeled 'Policy - Google Docs' or similar, to check the company's expense policy, specifically the relevant limit for the expense category (e.g., meal limit), for the verified expense.
+Step 8: Check the relevant expense limit (e.g., 'meal_limit: 1000') in the policy document displayed on the **Google Docs** page. This is to determine if the expense amount is within the allowed threshold.
+Step 9: Switch back to the expense management dashboard. This tab is typically labeled 'v0 App' or similar, to take action on the expense based on the receipt verification and policy compliance.
+Step 10: If the receipt is valid and the amount is within the policy limit, approve the expense. Click the green 'Approve' button located in the 'Actions' column of the expense row in the 'Expense Approval' table. The status of the expense will change to 'Approved'.
+Step 11: Identify the next pending expense from the 'Expense Approval' table. Look for another row showing expense details and a 'Pending' status, to select the next expense claim that needs to be reviewed and processed.
+Step 12: Switch to the **Google Drive** tab containing receipts. This tab is typically labeled 'fake_receipts - Google Drive' or similar, to locate and verify the corresponding receipt for the new expense.
+Step 13: If a PDF preview is currently open, close it by clicking the back arrow icon located at the top-left of the **Google Drive** PDF preview interface. This returns you to the file list to select the correct receipt for the current expense.
+Step 14: Open the correct receipt file (e.g., a PDF file) by clicking its name in the list of files within the 'fake_receipts' **Google Drive** folder. This is to open the receipt corresponding to the current expense.
+Step 15: Verify the details displayed on the opened PDF receipt (e.g., expense type, amount, date, employee) to confirm that they match the expense claim. This receipt must match the claim.
+Step 16: Switch to the **Policy** document tab. This tab is typically labeled 'Policy - Google Docs' or similar, to re-check the company's expense policy (e.g., meal limit) for the verified expense.
+Step 17: Check the relevant expense limit (e.g., 'meal_limit: 1000') in the policy document displayed on the **Google Docs** page. This is to determine if the expense amount is within the allowed threshold.
+Step 18: Switch back to the expense management dashboard. This tab is typically labeled 'v0 App' or similar, to take action on the expense based on the receipt verification and policy compliance.
+Step 19: If the expense amount exceeds the policy limit, reject the expense. Click the red 'Reject' button located in the 'Actions' column of the expense row in the 'Expense Approval' table. The status of the expense will change to 'Rejected'.
+
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
+
+Special Instructions:
+"Go to the expense management app \nhttps://v0-expense-dashboard.vercel.app/\n\n, check the policy and approve and reject the expense doc is here :https://docs.google.com/document/d/1o_ioqaJQv6IM7yJ0B3aePz8nVFgzQLFN9Rb1C7CWPoc/edit?tab=t.0
+
+the receipts folder is 
+"https://drive.google.com/drive/folders/1XsqU0KOqK4b-b27J8t14idND4n4YlCHD'
+
+If you are unable to check the policy documents please fall back to taking screenshot and noting details instead of invoking ask_human

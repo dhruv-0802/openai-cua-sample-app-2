@@ -1,0 +1,50 @@
+user_input: You have to do a task: LinkedIn Easy Apply Job Application.
+The description of the task: Apply for Easy Apply jobs on LinkedIn by searching for a specific job role and completing the application process.. If user intervention is required at any point,or you are not provided sufficient information to do the task, you need more inputs, you have reached some unexpected page, some extra information is required, pause the task and ask the user for information.
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
+Step 1: Open the browser and navigate to linkedin.com.
+Step 2: Go to the jobs section by clicking on the jobs button located on top. The 'Jobs' button is located at the top-center of the navigation bar.Click on the job button
+Step 3: Click on recent job searches and select 'the Job role type'. The job listing are located in the left panel, second from the top.
+select the required job from the dropdown
+Step 4: Search for jobs with 'Easy Apply' option.
+Step 5: Click on the 'Easy Apply' button wherever available. The 'Easy Apply' button is located near the bottom-left corner of the job listing for.
+Step 6: Click 'Next' after ensuring all fields are filled out. The 'Next' button is located at the bottom-right corner of the dialog box.
+Step 7: Select the resume to upload.
+Step 8: Click 'Next' to proceed. The 'Next' button is located at the bottom-right corner of the form.
+Step 9: Confirm the details and click 'Submit Application'.
+Step 10: If 'Easy Apply' is not available for 'the required job', skip to the next job. The 'Easy Apply' button is located next to the job listing.
+Step 11: Continue applying for other positions as needed.
+
+
+Here are the some additional details that you might require to complete the task. These will help you when you have to make a decision, or fill in some information. Plan with keeping these details in mind.
+Details:
+Detail Name: Current CTC - 1500000
+Detail Description: None
+Detail Value: 
+Detail Name: Expected CTC - 1800000
+Detail Description: None
+Detail Value: 
+Detail Name: Notice Period - 30 days
+Detail Description: None
+Detail Value: 
+Detail Name: Join Immediately ? - yes
+Detail Description: None
+Detail Value: 
+Detail Name: Experience? - 2years
+Detail Description: None
+Detail Value: 
+Detail Name: Experience in Python, Sql, Excel - 2years
+Detail Description: None
+Detail Value: 
+Detail Name: Job role - Product Manager
+Detail Description: None
+Detail Value: 
+
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the privious steps accordingly.
+
+Special Instructions:
+after typing the required job type , if it shows up in the dropdown , you can select the option from the dropdown, before proceeding with the easy apply filter
+
+Approve everything , write values on your own from the given information , no need to take user-input except from credentials you ask user for those and sign in in Linkedin using email only not gmail login 

@@ -1,0 +1,36 @@
+user_input: 
+##You have to do a task:
+ Send Email from Instagram Info.
+##The description of the task:
+ The task involves extracting an email address from an Instagram message and then composing and sending an email using that address..
+
+If you feel information is needed, or feel doubtful that information that you have might not be best, ask user for information by sending an assistant message.
+Here are the steps you need to follow to do the task.
+**TASK STEPS:**
+Step 1: Navigate to **instagram.com** by typing the URL into the address bar at the top of your browser window.
+Step 2: On the **Instagram** interface, click on the Messages icon, which resembles a paper airplane and is located in the left-hand vertical navigation menu.
+Step 3: Click on the desired chat entry from the list of conversations, typically displayed on the left panel, identified by sender name and/or message preview, to open the conversation.
+Step 4: Review the message content in the main chat window to identify and note down the necessary information for your follow-up, such as an email address.
+Step 5: Open a new browser tab. You can typically do this by clicking the '+' icon in the tab bar or using a keyboard shortcut, which will lead to a new tab page.
+Step 6: In the search bar located in the center of the new tab page, type the name of your email service (e.g., 'gmail').
+Step 7: Press the Enter key to initiate the search for your email service.
+Step 8: On the search results page, click on the search result link that prominently displays the name of your email service and its provider (e.g., 'Gmail - Google'), typically the official link (e.g., mail.google.com), to navigate to the website.
+Step 9: Once on the **Gmail** interface, click the 'Compose' button. This prominent button is usually located in the top-left area and may feature a pencil icon, opening a new email composition window.
+Step 10: Switch back to the browser tab displaying the **Instagram** page, located in your browser's tab bar, to refer back to the message if needed.
+Step 11: Switch back to the browser tab displaying the **Gmail** page, where your new message composition window is open, to continue drafting the email.
+Step 12: In the new email composition window, type the recipient's email address into the 'To' text input field, located at the top.
+Step 13: If an email address suggestion appears in a dropdown list or as an auto-complete option below the 'To' field as you type, click on it to select the correct recipient.
+Step 14: Click into the 'Subject' text input field in the new email composition window, located below the recipient fields (To, Cc, Bcc).
+Step 15: Type the desired email subject into the 'Subject' field.
+Step 16: Click the 'Send' button, typically a distinctly colored (e.g., blue) button located at the bottom of the email composition window, to send the email.
+Step 17: (Optional) If you need to recall the email, click the 'Undo' link or button. This is part of a temporary notification that appears (usually at the bottom-left or bottom-center of the screen) immediately after an email is sent.
+
+
+Here are some special instructions that you must follow to complete the task. If this conflicts with what was said before, this must be followed. Plan with keeping this in mind that these special instructions are very important. This should be followed at all costs. These might conflict the steps provided before, but these should take precedence. Modify the previous steps accordingly.
+
+Special Instructions:
+If no email select email as bhardwajdhruv0802@gmail.com
+
+After writing the email address ( select the email coming on the drop down)
+
+if you are stuck some where ask human for input

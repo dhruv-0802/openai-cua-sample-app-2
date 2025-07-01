@@ -1,7 +1,7 @@
 from computers import Computer
-from computers import LocalPlaywrightComputer
+from computers.default import LocalPlaywrightBrowser
 from utils import create_response, check_blocklisted_url
-
+import json
 
 def acknowledge_safety_check_callback(message: str) -> bool:
     response = input(
@@ -42,6 +42,18 @@ def handle_item(item, computer: Computer):
             },
         }
 
+        call_output_for_print={
+            "type": "computer_call_output",
+            "call_id": item["call_id"],
+            "acknowledged_safety_checks": pending_checks,
+            "output": {
+                "type": "input_image",
+            },
+        }
+        print("output for print")
+        print(call_output_for_print)
+        #can add additional input here to the computer use
+
         # additional URL safety checks for browser environments
         if computer.get_environment() == "browser":
             current_url = computer.get_current_url()
@@ -55,7 +67,7 @@ def handle_item(item, computer: Computer):
 
 def main():
     """Run the CUA (Computer Use Assistant) loop, using Local Playwright."""
-    with LocalPlaywrightComputer() as computer:
+    with LocalPlaywrightBrowser() as computer:
         dimensions = computer.get_dimensions()
         tools = [
             {
@@ -68,8 +80,15 @@ def main():
 
         items = []
         while True:  # get user input forever
-            user_input = input("> ")
+            #user_input = input("go to youtube and search for a drake song and play the top most song ")
+            user_input = "go to youtube"
             items.append({"role": "user", "content": user_input})
+            print("when user input is given")
+            with open('output.txt', 'a') as f:
+                f.write("when user input is given\n")
+            #print(items)
+            with open('output.txt', 'a') as f:
+                f.write(f"User Input and Items:\n{json.dumps(items, indent=4)}\n\n")
 
             while True:  # keep looping until we get a final response
                 response = create_response(
@@ -78,7 +97,12 @@ def main():
                     tools=tools,
                     truncation="auto",
                 )
-
+                print("when response is given")
+                with open('output.txt', 'a') as f:
+                    f.write("when response is given\n")
+                print(response)
+                with open('output.txt', 'a') as f:
+                    f.write(f"Response:\n{json.dumps(response, indent=4)}\n\n")
                 if "output" not in response:
                     print(response)
                     raise ValueError("No output from model")
@@ -87,10 +111,25 @@ def main():
 
                 for item in response["output"]:
                     items += handle_item(item, computer)
+                    print("when handle item is given")
+                    with open('output.txt', 'a') as f:
+                        f.write("when handle item is given\n")
+                   # print(items)
+                    with open('output.txt', 'a') as f:
+                        f.write(f"Items after handle_item:\n{json.dumps(items, indent=4)}\n\n")
 
                 if items[-1].get("role") == "assistant":
+                    print("when items[-1].get('role') == 'assistant' is given")
+                    with open('output.txt', 'a') as f:
+                        f.write("when items[-1].get('role') == 'assistant' is given\n")
+                # print(items)
                     break
-
+                    #print("when items[-1].get('role') == 'assistant' is given")
+                    #with open('output.txt', 'a') as f:
+                    #    f.write("when items[-1].get('role') == 'assistant' is given\n")
+                # print(items)
+                with open('output.txt', 'a') as f:
+                    f.write(f"Items after loop:\n{json.dumps(items, indent=4)}\n\n")
 
 if __name__ == "__main__":
     main()

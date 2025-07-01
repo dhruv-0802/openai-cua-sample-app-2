@@ -3,6 +3,7 @@ from agent.agent import Agent
 from computers.config import *
 from computers.default import *
 from computers import computers_config
+import json
 
 
 def acknowledge_safety_check_callback(message: str) -> bool:
@@ -58,8 +59,9 @@ def main():
             if not args.start_url.startswith("http"):
                 args.start_url = "https://" + args.start_url
             agent.computer.goto(args.start_url)
-
+            
         while True:
+            
             try:
                 user_input = args.input or input("> ")
                 if user_input == "exit":
